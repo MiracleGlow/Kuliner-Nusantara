@@ -1,0 +1,403 @@
+/*this css is from my website : "primaa.vercel.app"*/
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(Poppins-Bold.ttf);
+  }
+  
+  @font-face {
+    font-family: Poppins-light;
+    src: url(fonts/poppins.light.ttf);
+  }
+  
+  @font-face {
+    font-family: Poppins-regular;
+    src: url(fonts/poppins.regular.ttf);
+  }
+  
+  @font-face {
+    font-family: DOS;
+    src: url(fonts/Perfect_DOS_VGA_437_Win.ttf);
+  }
+  
+  @keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins-Bold;
+  }
+  
+  section {
+    background: rgba(84,85,131,255, 0.4);
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  header {
+    background: rgba(114, 134, 211, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(114, 134, 211, 0.3);
+    color: #ffffff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .nav-list li {
+    margin: 0 10px;
+    transition: opacity 0.5s ease;
+    animation: fadeIn 0.5s ease forwards; /* Added animation */
+    opacity: 0; /* Initial state for animation */
+  }
+  
+  .nav-open .nav-list li {
+    opacity: 1; /* Final state for animation */
+  }
+  
+  
+  .nav-list a {
+    color: #333;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-list a:focus {
+    text-shadow: 0px 4px 5px rgba(144, 134, 235, 0.6);
+    color: #007BFF;
+  }
+  
+  .nav-list a:hover {
+    color: rgba(114, 134, 211, 1);
+  }
+  
+  .Menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .Menu-btn span {
+    background-color: #fff;
+    height: 3px;
+    transition: transform 0.3s ease;
+  }
+  
+  .Menu-btn-open {
+    transform: rotate(90deg);
+  }
+  
+  .Menu-btn-open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .Menu-btn-open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .Menu-btn-open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  @media (min-width: 600px) {
+    nav {
+        display: block;
+    }
+  
+    .Menu-btn {
+        display: none;
+    }
+  }
+  
+  .nav-open {
+    display: block;
+  }
+  
+  .kersek {
+    color: #391d55;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  main {
+    padding-top: 70px;
+  }
+  
+  section {
+    padding: 20px;
+    animation-name: fadeInUp;
+    animation-duration: 1.6s;
+  }
+  
+  .kotaknasi {
+    flex: 1;
+    min-width: 300px;
+    padding: 16px;
+    margin: 5px;
+    text-align: center;
+  }
+  
+  @media (max-width: 500px) {
+    .kotaknasi {
+        flex-direction: column;
+    }
+  }
+  
+  .pp {
+    border-radius: 8px;
+    max-width: 100%;
+  }
+  
+  .ssgithub {
+    max-width: 80%;
+    border-radius: 10px;
+  }
+  
+  .hello {
+    font-family: Poppins-Bold;
+  }
+  
+  .nama {
+    color: black;
+    font-size: 42px;
+  }
+  
+  .ayem {
+    color: #543310;
+  }
+  
+  @media (min-width: 800px) {
+    .hello {
+      font-family: Poppins-Bold;
+    }
+    
+    .nama {
+      color: rgb(0, 0, 0);
+      font-size: 10rem;
+      text-shadow: 0.4rem 0.4rem 0rem rgba(0,0,0,0.4);
+    }
+    
+    .ayem {
+      color: #543310;
+      font-size: 2rem;
+      text-decoration: underline;
+    }
+  }
+  
+  .about-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgba(114, 134, 211, 1);
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+  }
+  
+  .about-button:hover {
+    background-color: rgb(72, 92, 172);
+  }
+  
+  /*#changingText {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    font-size: 38px;
+  }*/
+  
+  #changingText {
+    display: inline-block;
+    font-size: 38px;
+    white-space: nowrap;
+    border-right: 2px solid;
+    animation: blink 0.75s step-end infinite;
+  }
+  @keyframes blink {
+    50% {
+      border-color: transparent;
+    }
+  }
+  
+  .devv {
+    font-size: 38px;
+    color: #007BFF;
+    display: inline-block;
+  }
+  
+  .sosmed {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  
+  .sosmed li {
+    margin: 10px 0;
+  }
+  
+  .sosmed .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #007BFF;
+    color: white;
+    font-size: 24px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .sosmed .button:hover {
+    transform: scale(1.1);
+  }
+  
+  .sosmed .button.instagram:hover {
+    background-color: #E4405F;
+  }
+  
+  .sosmed .button.youtube:hover {
+    background-color: #FF0000;
+  }
+  
+  .sosmed .button.github:hover {
+    background-color: #333;
+  }
+  
+  .sosmed .button.osu:hover {
+    background-color: #FF66AA;
+  }
+  
+  .footer {
+    background-color: rgba(114, 134, 211, 0.3);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    /*position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;*/
+  }
+  
+  .project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .item-card {
+    background-color: #ecf0f4;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s;
+  }
+  
+.deskripsi {
+  text-align: justify;
+}
+
+  .item-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .item-card:hover .item-img {
+    filter: saturate(150%);
+    box-shadow: 8px 8px 28px -5px rgba(20,0,252,0.48);
+    -webkit-box-shadow: 8px 8px 28px -5px rgba(20,0,252,0.48);
+    -moz-box-shadow: 8px 8px 28px -5px rgba(20,0,252,0.48);
+    transition: box-shadow 0.3s;
+  }
+  
+  .item-img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: filter 0.3s; /* Added transition for smooth effect */
+  }
+  
+  .item-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: rgba(114, 134, 211, 1);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .item-link:hover {
+    background-color: rgb(72, 92, 172);
+  }
+  
+  /* Dark mode adjustments */
+  .dark-mode .item-card {
+    background-color: #2c2c2c;
+    color: #ffffff;
+  }
+  
+  .dark-mode .item-link {
+    background-color: #555555;
+  }
+  
+  .dark-mode .item-link:hover {
+    background-color: #777777;
+  }
+  
