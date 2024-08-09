@@ -141,12 +141,13 @@
             max-width: 500px;
             margin: 0 auto;
             position: relative;
+            display: inline-flex;
         }
 
         .search-input {
             width: 100%;
             padding: 15px;
-            border-radius: 50px;
+            border-radius: 8px;
             border: none;
             font-size: 18px;
             outline: none;
@@ -182,6 +183,21 @@
             display: block;
         }
 
+        
+
+        .list-button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: rgba(114, 134, 211, 1);
+        color: white;
+        text-align: center;
+        border-radius: 8px;
+        }
+  
+        .list-button:hover {
+        background-color: rgb(72, 92, 172);
+        }
+
         footer {
             background-color: rgba(114, 134, 211, 0.3);
             color: white;
@@ -194,7 +210,7 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="https://github.com/MiracleGlow"><img src="https://raw.githubusercontent.com/MiracleGlow/asset/master/icon/20240503_180744.png" alt="Miracle"></a>
+                <a href="team.html"><img src="https://raw.githubusercontent.com/MiracleGlow/asset/master/icon/20240503_180744.png" alt="Teams"></a>
             </div>
             <nav id="navMenu">
                 <ul class="nav-list">
@@ -217,6 +233,7 @@
             <p>Temukan berbagai macam resep makanan dan minuman khas dari berbagai daerah di Indonesia. Jelajahi keanekaragaman kuliner nusantara dan temukan cita rasa yang otentik dan lezat.</p>
             <div class="search-container">
                 <input type="text" id="searchInput" class="search-input" placeholder="Cari makanan atau minuman...">
+                <button class="list-button" onclick="window.location.href='list.html'">List</button>
                 <div id="searchResults" class="search-results"></div>
             </div>
         </section>
