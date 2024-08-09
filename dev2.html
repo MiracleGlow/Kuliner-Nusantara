@@ -294,10 +294,11 @@
   }
   
 
-        .search-container {
+  .search-container {
             position: relative;
             width: 100%;
             max-width: 300px;
+            margin-left: 20px;
         }
 
         .search-input {
@@ -305,6 +306,7 @@
             padding: 10px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            font-size: 14px;
         }
 
         .search-results {
@@ -327,6 +329,7 @@
             border-bottom: 1px solid #ddd;
             color: #333;
             text-decoration: none;
+            font-size: 14px;
         }
 
         .search-results a:hover {
@@ -335,6 +338,39 @@
 
         .search-results.show {
             display: block;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            flex-grow: 1;
+            text-align: right;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .nav-list a {
+            color: #ffffff;
+            font-size: 14px;
+            text-transform: uppercase;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-list a:hover {
+            background-color: rgba(114, 134, 211, 0.5);
         }
     </style>
 </head>

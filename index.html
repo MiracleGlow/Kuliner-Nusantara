@@ -3,8 +3,192 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kuliner Nusantara</title>
-    <link rel="stylesheet" href="style/style.css">
+    <title>Kuliner Nusantara - Home</title>
+    <style>
+        /* CSS dari "primaa.vercel.app" */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Poppins-Bold;
+            background: url('style/images/bg.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+        }
+
+        header {
+            background: rgba(114, 134, 211, 0.3);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(114, 134, 211, 0.3);
+            color: #ffffff;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            border-radius: 100%;
+            width: 40px;
+            height: 40px;
+        }
+
+        nav {
+            display: none;
+        }
+
+        .nav-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .nav-list li {
+            margin: 0 10px;
+            transition: opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        .nav-open .nav-list li {
+            opacity: 1;
+        }
+
+        .nav-list a {
+            color: #ffffff;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-list a:hover {
+            color: rgba(114, 134, 211, 1);
+        }
+
+        .Menu-btn {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 24px;
+            height: 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .Menu-btn span {
+            background-color: #fff;
+            height: 3px;
+            transition: transform 0.3s ease;
+        }
+
+        .Menu-btn-open {
+            transform: rotate(90deg);
+        }
+
+        .Menu-btn-open span:nth-child(1) {
+            transform: translateY(8px) rotate(45deg);
+        }
+
+        .Menu-btn-open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .Menu-btn-open span:nth-child(3) {
+            transform: translateY(-8px) rotate(-45deg);
+        }
+
+        @media (min-width: 600px) {
+            nav {
+                display: block;
+            }
+
+            .Menu-btn {
+                display: none;
+            }
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.5); /* Overlay untuk meningkatkan keterbacaan teks */
+        }
+
+        .hero-section h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 24px;
+            max-width: 800px;
+            margin-bottom: 30px;
+        }
+
+        .search-container {
+            width: 100%;
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px;
+            border-radius: 50px;
+            border: none;
+            font-size: 18px;
+            outline: none;
+            text-align: center;
+        }
+
+        .search-results {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
+            display: none;
+        }
+
+        .search-results a {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .search-results a:hover {
+            background-color: rgba(114, 134, 211, 0.3);
+        }
+
+        .search-results.show {
+            display: block;
+        }
+
+        footer {
+            background-color: rgba(114, 134, 211, 0.3);
+            color: white;
+            text-align: center;
+            padding: 8px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -28,55 +212,67 @@
     </header>
     
     <main>
-        <div class="kersek">
-            <div class="kotaknasi">
-                <h1>Kuliner Nusantara</h1>
+        <section class="hero-section">
+            <h1>Selamat Datang di Kuliner Nusantara</h1>
+            <p>Temukan berbagai macam resep makanan dan minuman khas dari berbagai daerah di Indonesia. Jelajahi keanekaragaman kuliner nusantara dan temukan cita rasa yang otentik dan lezat.</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" class="search-input" placeholder="Cari makanan atau minuman...">
+                <div id="searchResults" class="search-results"></div>
             </div>
-            <div class="project-grid">
-                <div class="item-card">
-                    <img src="style/images/rendang.jpeg" width="150" alt="Rendang" class="item-img">
-                    <h2>Rendang</h2>
-                    <p class="deskripsi">Rendang merupakan makanan yang berasal dari Sumatra Barat. Makanan ini berbahan dasar daging dan dimasak dengan bumbu aneka rempah dan santan.</p>
-                    <a href="rendang.html" class="item-link">View More</a>
-                </div>
-                <div class="item-card">
-                    <img src="style/images/empek2.jpg" width="150" alt="Empek-empek" class="item-img">
-                    <h2>Empek-empek Palembang</h2>
-                    <p class="deskripsi">Empek-empek atau disebut juga pempek merupakan makanan yang terbuat dari daging ikan yang digiling lembut. Kemudian dicampur dengan tepung sagu dan ditambah beberapa bahan seperti penyedap rasa, garam, telur, dan lainnya.</p>
-                    <a href="empek2.html" class="item-link">View More</a>
-                </div>
-                <div class="item-card">
-                    <img src="style/images/rujakcingur.jpeg" alt="rujakcingur" class="item-img">
-                    <h2>Rujak Cingur</h2>
-                    <p class="deskripsi">Makanan tradisional selanjutnya berasal dari Jawa Timur, yakni rujak cingur. Makanan ini terdiri dari beberapa jenis irisan buah, seperti timun, bengkuang, mangga muda, nanas, dan kedondong.</p>
-                    <a href="#" class="item-link">View More</a>
-                </div>
-                <div class="item-card">
-                    <img src="style/images/sotobanjar.jpg" alt="sotobanjar" class="item-img">
-                    <h2>Soto Banjar</h2>
-                    <p class="deskripsi">Makanan ini dinamakan soto Banjar sebab merupakan makanan khas suku Banjar, Kalimantan Selatan. Santapan ini terbuat dari bahan utama ayam dengan bumbu aneka rempah.</p>
-                    <a href="#" class="item-link">View More</a>
-                </div>
-                <div class="item-card">
-                    <img src="style/images/dawet.jpg" alt="Dawet" class="item-img">
-                    <h2>Dawet</h2>
-                    <p class="deskripsi">Dawet adalah minuman berupa campuran air gula, santan, dan cendol yang berasal dari desa Jabung, Ponorogo. Minuman dengan rasa manis dan gurih ini juga kerap disajikan sebagai menu upacara pernikahan adat suku Jawa.</p>
-                    <a href="#" class="item-link">View More</a>
-                </div>
-                <div class="item-card">
-                    <img src="style/images/ronde.jpg" alt="Wedang Ronde" class="item-img">
-                    <h2>Wedang Ronde</h2>
-                    <p class="deskripsi">Wedang ronde adalah salah satu minuman khas Jawa Tengah. Minuman ini mengandung ramuan agak pedas dengan penganan bulat-bulat kecil di dalamnya. Pembuatan wedang ronde terdiri dari kuah jahe yang berisi ronde yang berbentuk bulat-bulat.</p>
-                    <a href="#" class="item-link">View More</a>
-                </div>
-            </div>
-        </div>
+        </section>
     </main>
 
     <footer class="footer">
-        &copy; 2024 Prima M. All Rights Reserved.
+        &copy; 2024 AAPS All Rights Reserved.
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById("navMenu");
+            const hamburger = document.querySelector(".Menu-btn");
+            nav.classList.toggle("nav-open");
+            hamburger.classList.toggle("Menu-btn-open");
+
+            const navItems = document.querySelectorAll(".nav-list li");
+            navItems.forEach((item, index) => {
+                item.style.animationDelay = `${index * 0.1}s`;
+            });
+        }
+
+        const searchInput = document.getElementById("searchInput");
+        const searchResults = document.getElementById("searchResults");
+
+        searchInput.addEventListener("input", function() {
+            const query = this.value.toLowerCase();
+            searchResults.innerHTML = "";
+            
+            if (query) {
+                const items = [
+                    { name: "Rendang", link: "rendang.html" },
+                    { name: "Empek-empek Palembang", link: "empek2.html" },
+                    { name: "Rujak Cingur", link: "rujakcingur.html" },
+                    { name: "Soto Banjar", link: "sotobanjar.html" },
+                    { name: "Dawet", link: "Dawet.html" },
+                    { name: "Wedang Ronde", link: "WedangRonde.html" },
+                ];
+
+                const filteredItems = items.filter(item => item.name.toLowerCase().includes(query));
+
+                if (filteredItems.length > 0) {
+                    filteredItems.forEach(item => {
+                        const resultItem = document.createElement("a");
+                        resultItem.href = item.link;
+                        resultItem.textContent = item.name;
+                        searchResults.appendChild(resultItem);
+                    });
+                    searchResults.classList.add("show");
+                } else {
+                    searchResults.classList.remove("show");
+                }
+            } else {
+                searchResults.classList.remove("show");
+            }
+        });
+    </script>
 </body>
 </html>
