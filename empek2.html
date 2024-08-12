@@ -3,104 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Empek-empek Palembang</title>
-    <style>
-        /* style-empek.css */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #f0f0f0;
-    color: #333;
-}
-
-header {
-    background-color: #2F4F4F; /* Warna hijau gelap untuk menyesuaikan dengan empek-empek */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
-.content {
-    max-width: 1200px;
-    margin: auto;
-    padding: 20px;
-}
-
-.kersek {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.kotaknasi {
-    flex: 1 1 45%;
-    background-color: white;
-    border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.kotaknasi img.pp {
-    width: 100%;
-    border-radius: 10px;
-}
-
-h1 {
-    font-size: 28px;
-    color: #2F4F4F;
-}
-
-h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #555;
-}
-
-ul, ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-}
-
-ul li, ol li {
-    line-height: 1.6;
-}
-
-.footer {
-    background-color: #2F4F4F;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-    margin-top: 40px;
-    font-size: 14px;
-}
-
-/* Responsif */
-@media (max-width: 768px) {
-    .kersek {
-        flex-direction: column;
-    }
-
-    .kotaknasi {
-        flex: 1 1 100%;
-    }
-
-    h1 {
-        font-size: 24px;
-    }
-
-    h3 {
-        font-size: 18px;
-    }
-}
-
-    </style>
+    <title>Rendang</title>
+    <link rel="stylesheet" href="style/resep.css">
+    <link rel="stylesheet" href="style/header.css">
 </head>
 <body>
-    <header>
-        <!--biar saya yang urus header-->
+    <header class="header">
+        <div class="logo">
+            <a href="team.html"><img src="style/images/logo.png" alt="Logo"/></a>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Cari makanan atau minuman..." class="search-input" id="searchInput">
+            <button class="search-icon">
+                <img src="style/images/search-svgrepo-com.png" alt="Search Icon">
+            </button>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="list.html">Daftar Resep</a>
+            <a href="team.html">Contact</a>
+        </nav>
+        
+        <div class="menu-icon" id="menu-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/menu.png" alt="Menu Icon">
+        </div>
     </header>
 
     <div class="content">
