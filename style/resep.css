@@ -1,0 +1,91 @@
+/* style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    margin-top: 64px;
+    box-sizing: border-box;
+    background-color: #f8f8f8;
+    color: #333;
+}
+
+header {
+    background-color: #8B4513; /* Warna coklat sesuai dengan tema rendang */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.kersek {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.kotaknasi {
+    flex: 1 1 45%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kotaknasi img.pp {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #8B4513;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li, ol li {
+    line-height: 1.6;
+}
+
+.footer {
+    background-color: #8B4513;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .kersek {
+        flex-direction: column;
+    }
+
+    .kotaknasi {
+        flex: 1 1 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
