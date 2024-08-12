@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empek-empek Palembang</title>
+    <style>
+        /* style-empek.css */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+header {
+    background-color: #2F4F4F; /* Warna hijau gelap untuk menyesuaikan dengan empek-empek */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.kersek {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.kotaknasi {
+    flex: 1 1 45%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.kotaknasi img.pp {
+    width: 100%;
+    border-radius: 10px;
+}
+
+h1 {
+    font-size: 28px;
+    color: #2F4F4F;
+}
+
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+ul li, ol li {
+    line-height: 1.6;
+}
+
+.footer {
+    background-color: #2F4F4F;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+    .kersek {
+        flex-direction: column;
+    }
+
+    .kotaknasi {
+        flex: 1 1 100%;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <!--biar saya yang urus header-->
+    </header>
+
+    <div class="content">
+        <main>
+                <div class="kersek">
+                    <div class="kotaknasi">
+                        <img class="pp" src="../style/images/empek2.jpg" alt="Empek-empek Palembang">
+                    </div>
+
+                    <div class="kotaknasi">
+                        <h1>Resep Empek-empek Palembang</h1>
+                        <h3>Bahan-bahan :</h3>
+                    <ul>
+                        <li>500 gram ikan tenggiri, giling halus.</li>
+                        <li>300 ml air es.</li>
+                        <li>250 gram tepung sagu.</li>
+                        <li>1 sdt garam.</li>
+                        <li>2 siung bawang putih, haluskan.</li>
+                        <li>2 butir telur untuk isian.</li>
+                    </ul>
+                        
+                        <br>
+                        <h3>Bahan Cuko :</h3>
+                    <ul>
+                        <li>250 gram gula merah.</li>
+                        <li>50 gram asam jawa.</li>
+                        <li>500 ml air.</li>
+                        <li>10 buah cabai rawit, haluskan.</li>
+                        <li>5 siung bawang putih, haluskan.</li>
+                        <li>1 sdt garam.</li>
+                    </ul>
+
+                        <h3>Cara Membuatnya :</h3>
+                    <ol>
+                        <li>Campur ikan tenggiri, air es, bawang putih, dan garam. Aduk hingga rata.</li>
+                        <li>Tambahkan tepung sagu sedikit demi sedikit sambil terus diaduk hingga adonan kalis.</li>
+                        <li>Bentuk adonan sesuai selera, masukkan telur sebagai isian jika diinginkan.</li>
+                        <li>Rebus empek-empek dalam air mendidih hingga mengapung, angkat dan tiriskan.</li>
+                        <li>Goreng empek-empek hingga kecokelatan. Sajikan dengan cuko.</li>
+                    </ol>
+                    </div>
+                    
+                </div>
+
+        </main>
+    </div>
+
+    <footer class="footer">
+        &copy; 2024 Kuliner Nusantara All Rights Reserved.
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -31,7 +31,18 @@
     text-decoration: none;
     color: black;
     font-weight: bold;
+    transition: color 0.3s ease-in-out;
 }
+
+  
+  .navbar a:focus {
+    text-shadow: 0px 4px 5px rgba(144, 134, 235, 0.6);
+    color: #007BFF;
+  }
+  
+  .navbar a:hover {
+    color: rgba(114, 134, 211, 1);
+  }
 
 .search-container {
     display: flex;

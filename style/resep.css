@@ -9,13 +9,6 @@ body {
     color: #333;
 }
 
-header {
-    background-color: #8B4513; /* Warna coklat sesuai dengan tema rendang */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
-
 .content {
     max-width: 1200px;
     margin: auto;
@@ -44,7 +37,7 @@ header {
 
 h1 {
     font-size: 28px;
-    color: #8B4513;
+    color: #351eb8;
 }
 
 h3 {
@@ -63,7 +56,7 @@ ul li, ol li {
 }
 
 .footer {
-    background-color: #8B4513;
+    background-color: #444466;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -71,7 +64,7 @@ ul li, ol li {
     font-size: 14px;
 }
 
-/* Responsif */
+/* Mobile */
 @media (max-width: 768px) {
     .kersek {
         flex-direction: column;
