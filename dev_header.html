@@ -1,3 +1,6 @@
+tolong perbaiki searchbar dan navigasi pada navbar agar tidak bertabrakan dan buatlah menjadi lebih responsive, buatlah agar searchbar menempel ke kiri di dekat logo dan ketika di tampilan mobile ubah tampilkan searchbar menjadi icon search pada kode ini :
+note : Tuliskan kode yang perlu di ubah atau ditambahkan saja
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,130 +8,194 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuliner Nusantara</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
 
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 10px 20px;
-            background-color: white;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .container {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            justify-content: space-between;
-        }
-
-        .logo img {
-            max-width: 50px;
-            height: auto;
-        }
+@font-face {
+    font-family: Coiny;
+    src: url(Coiny-Cyrillic.ttf);
+  }
+  
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Coiny;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  header {
+    background: rgba(131, 180, 255, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(131, 180, 255, 0.3);
+    color: #ffffff;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .logo img {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+  }
+  
+  nav {
+    display: none;
+  }
+  
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+  
+  .nav-list li {
+    margin: 0 10px;
+    transition: opacity 0.5s ease;
+    animation: fadeIn 0.5s ease forwards; /* Added animation */
+    opacity: 0; /* Initial state for animation */
+  }
+  
+  .nav-open .nav-list li {
+    opacity: 1; /* Final state for animation */
+  }
+  
+  
+  .nav-list a {
+    color: #333;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .nav-list a:focus {
+    text-shadow: 0px 4px 5px rgba(144, 134, 235, 0.6);
+    color: #007BFF;
+  }
+  
+  .nav-list a:hover {
+    color: rgba(114, 134, 211, 1);
+  }
+  
+  .Menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .Menu-btn span {
+    background-color: #fff;
+    height: 3px;
+    transition: transform 0.3s ease;
+  }
+  
+  .Menu-btn-open {
+    transform: rotate(90deg);
+  }
+  
+  .Menu-btn-open span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .Menu-btn-open span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .Menu-btn-open span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  
+  @media (min-width: 600px) {
+    nav {
+        display: block;
+    }
+  
+    .Menu-btn {
+        display: none;
+    }
+  }
+  
+  .nav-open {
+    display: block;
+  }
+  
 
         .search-container {
-            display: flex;
-            align-items: center;
-            flex: 1;
-            margin-left: 20px;
             position: relative;
+            width: 100%;
+            max-width: 300px;
         }
 
         .search-input {
             width: 100%;
-            padding: 10px 10px 10px 40px;
-            border-radius: 20px;
+            padding: 10px;
+            border-radius: 5px;
             border: 1px solid #ccc;
-            font-size: 14px;
         }
 
-        .search-icon {
+        .search-results {
             position: absolute;
-            left: 10px;
-            font-size: 18px;
-            color: #888;
-        }
-
-        nav ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            align-items: center;
-        }
-
-        nav ul li {
-            margin-left: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-        }
-
-        .Menu-btn {
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: white;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            z-index: 1000;
             display: none;
-            flex-direction: column;
-            cursor: pointer;
         }
 
-        .Menu-btn span {
-            height: 3px;
-            width: 25px;
-            background-color: #333;
-            margin: 4px 0;
-            transition: 0.4s;
+        .search-results a {
+            display: block;
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            color: #333;
+            text-decoration: none;
         }
 
-        /* Responsive Styles */
-        @media (max-width: 768px) {
-            .search-container {
-                display: none;
-            }
-
-            .Menu-btn {
-                display: flex;
-            }
-
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 50px;
-                right: 10px;
-                background-color: white;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                flex-direction: column;
-                width: 200px;
-            }
-
-            nav.nav-open ul {
-                display: flex;
-            }
-
-            nav ul li {
-                margin: 0;
-                padding: 10px;
-                border-bottom: 1px solid #ccc;
-            }
-
-            nav ul li:last-child {
-                border-bottom: none;
-            }
-
-            .search-container.mobile {
-                display: flex;
-                margin-top: 10px;
-                width: 100%;
-            }
+        .search-results a:hover {
+            background-color: rgba(131, 180, 255, 0.3);
         }
 
+        .search-results.show {
+            display: block;
+        }
+
+        .footer {
+    background-color: rgba(131, 180, 255, 0.3);
+    color: white;
+    text-align: center;
+    padding: 8px;
+  }
     </style>
 </head>
 <body>
@@ -138,7 +205,6 @@
                 <a href="https://github.com/MiracleGlow"><img src="https://raw.githubusercontent.com/MiracleGlow/asset/master/icon/20240503_180744.png" alt="Miracle"></a>
             </div>
             <div class="search-container">
-                <i class="search-icon">&#128269;</i>
                 <input type="text" id="searchInput" class="search-input" placeholder="Cari makanan atau minuman...">
                 <div id="searchResults" class="search-results"></div>
             </div>
@@ -162,7 +228,7 @@
     </main>
 
     <footer class="footer">
-        &copy; 2024 AAPS All Rights Reserved.
+        &copy; 2024 SAPA All Rights Reserved.
     </footer>
 
     <script>

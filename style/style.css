@@ -1,9 +1,10 @@
 /*this css is from my website : "primaa.vercel.app"*/
 
 @font-face {
-    font-family: Poppins-Bold;
-    src: url(Poppins-Bold.ttf);
+    font-family: Coiny;
+    src: url(Coiny-Cyrillic.ttf);
   }
+  
   
   
   @keyframes fadeInUp {
@@ -20,7 +21,7 @@
   body {
     margin: 0;
     padding: 0;
-    font-family: Poppins-Bold;
+    font-family: Coiny;
   }
   
   section {
@@ -31,12 +32,12 @@
     text-decoration: none;
   }
   
-  header {
-    background: rgba(114, 134, 211, 0.3);
+  /*header {
+    background: rgba(131, 180, 255, 0.3);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(114, 134, 211, 0.3);
+    border: 1px solid rgba(131, 180, 255, 0.3);
     color: #ffffff;
     padding: 10px 20px;
     position: fixed;
@@ -83,12 +84,12 @@
   .nav-list li {
     margin: 0 10px;
     transition: opacity 0.5s ease;
-    animation: fadeIn 0.5s ease forwards; /* Added animation */
-    opacity: 0; /* Initial state for animation */
+    animation: fadeIn 0.5s ease forwards; 
+    opacity: 0; 
   }
   
   .nav-open .nav-list li {
-    opacity: 1; /* Final state for animation */
+    opacity: 1;
   }
   
   
@@ -150,10 +151,10 @@
   
   .nav-open {
     display: block;
-  }
+  }*/
   
   .kersek {
-    color: #391d55;
+    color: #1A2130;
     display: flex;
     flex-wrap: wrap;
   }
@@ -221,7 +222,7 @@
   }
   
   .footer {
-    background-color: rgba(114, 134, 211, 0.3);
+    background-color: rgba(131, 180, 255, 0.3);
     color: white;
     text-align: center;
     padding: 8px;
