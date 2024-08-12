@@ -12,12 +12,12 @@ searchInput.addEventListener("input", function() {
     
     if (query) {
         const items = [
-            { name: "Rendang", link: "resep/rendang.html" },
-            { name: "Empek-empek Palembang", link: "resep/empek2.html" },
-            { name: "Gudeg", link: "resep/gudeg.html" },
-            { name: "Soto Banjar", link: "resep/sotobanjar.html" },
-            { name: "Dawet", link: "resep/dawet.html" },
-            { name: "Wedang Ronde", link: "resep/wedangronde.html" },
+            { name: "Rendang", link: "rendang.html" },
+            { name: "Empek-empek Palembang", link: "empek2.html" },
+            { name: "Gudeg", link: "gudeg.html" },
+            { name: "Soto Banjar", link: "sotobanjar.html" },
+            { name: "Dawet", link: "dawet.html" },
+            { name: "Wedang Ronde", link: "wedangronde.html" },
         ];
 
         const filteredItems = items.filter(item => item.name.toLowerCase().includes(query));
