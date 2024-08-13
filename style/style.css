@@ -1,11 +1,4 @@
 /*this css is from my website : "primaa.vercel.app"*/
-
-@font-face {
-    font-family: Coiny;
-    src: url(Coiny-Cyrillic.ttf);
-  }
-  
-  
   
   @keyframes fadeInUp {
     from {
@@ -32,127 +25,6 @@
     text-decoration: none;
   }
   
-  /*header {
-    background: rgba(131, 180, 255, 0.3);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(5px);
-    border: 1px solid rgba(131, 180, 255, 0.3);
-    color: #ffffff;
-    padding: 10px 20px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-  }
-  
-  .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .logo img {
-    border-radius: 100%;
-    width: 40px;
-    height: 40px;
-  }
-  
-  nav {
-    display: none;
-  }
-  
-  .nav-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-  
-  @keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-  }
-  
-  .nav-list li {
-    margin: 0 10px;
-    transition: opacity 0.5s ease;
-    animation: fadeIn 0.5s ease forwards; 
-    opacity: 0; 
-  }
-  
-  .nav-open .nav-list li {
-    opacity: 1;
-  }
-  
-  
-  .nav-list a {
-    color: #333;
-    transition: color 0.3s ease-in-out;
-  }
-  
-  .nav-list a:focus {
-    text-shadow: 0px 4px 5px rgba(144, 134, 235, 0.6);
-    color: #007BFF;
-  }
-  
-  .nav-list a:hover {
-    color: rgba(114, 134, 211, 1);
-  }
-  
-  .Menu-btn {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 24px;
-    height: 20px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-  }
-  
-  .Menu-btn span {
-    background-color: #fff;
-    height: 3px;
-    transition: transform 0.3s ease;
-  }
-  
-  .Menu-btn-open {
-    transform: rotate(90deg);
-  }
-  
-  .Menu-btn-open span:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-  }
-  
-  .Menu-btn-open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .Menu-btn-open span:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-  }
-  
-  @media (min-width: 600px) {
-    nav {
-        display: block;
-    }
-  
-    .Menu-btn {
-        display: none;
-    }
-  }
-  
-  .nav-open {
-    display: block;
-  }*/
-  
   .kersek {
     color: #1A2130;
     display: flex;
@@ -161,12 +33,6 @@
   
   main {
     padding-top: 70px;
-  }
-  
-  section {
-    padding: 20px;
-    animation-name: fadeInUp;
-    animation-duration: 1.6s;
   }
   
   .kotaknasi {
@@ -201,25 +67,6 @@
     background-color: rgb(72, 92, 172);
   }
   
-  /*#changingText {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-    text-align: center;
-    font-size: 38px;
-  }*/
-  
-  #changingText {
-    display: inline-block;
-    font-size: 38px;
-    white-space: nowrap;
-    border-right: 2px solid;
-    animation: blink 0.75s step-end infinite;
-  }
-  @keyframes blink {
-    50% {
-      border-color: transparent;
-    }
-  }
   
   .footer {
     background-color: rgba(131, 180, 255, 0.3);
@@ -270,7 +117,7 @@
     height: 150px;
     object-fit: cover;
     border-radius: 10px;
-    transition: filter 0.3s; /* Added transition for smooth effect */
+    transition: filter 0.3s;
   }
   
   .item-link {
