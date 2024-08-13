@@ -175,7 +175,7 @@ nav {
 .list-button {
 display: inline-block;
 padding: 10px 20px;
-background-color: #007BFF;
+background-color: rgba(114, 134, 211, 1);
 color: #333;
 text-align: center;
 border-radius: 8px;
@@ -183,7 +183,7 @@ font-size: 16px;
 }
 
 .list-button:hover {
-background-color: #0053ac;
+background-color: rgb(72, 92, 172);
 }
 
 footer {
