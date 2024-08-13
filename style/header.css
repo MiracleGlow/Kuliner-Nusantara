@@ -11,7 +11,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
     background-color: white;
     border-bottom: 1px solid #ccc;
     padding: 10px 20px;
@@ -50,7 +49,7 @@ body {
   }
   
   .navbar a:hover {
-    color: rgba(114, 134, 211, 1);
+    color: #007BFF;
   }
 
 .search-container {
@@ -117,7 +116,7 @@ body {
     }
 
     .search-container {
-        margin: 8px;
+        margin: 8px 5;
         max-width: 100%;
     }
 }
