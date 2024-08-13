@@ -7,6 +7,22 @@ body {
     font-family: Merienda;
 }
 
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+  }
+
+main {
+    animation-name: fadeInUp;
+  animation-duration: 1.6s;
+}
+
 .header {
     display: flex;
     align-items: center;
