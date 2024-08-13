@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            margin-top: 100px;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            margin: 20px;
+        }
+
+        .logo-about {
+            width: 320px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+    <link rel="stylesheet" href="style/header.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="team.html"><img src="style/images/logo.png" alt="Logo"/></a>
+        </div>
+
+        <div class="search-container">
+            <input type="text" placeholder="Cari makanan atau minuman..." class="search-input" id="searchInput">
+            <button class="search-icon">
+                <img src="style/images/search-svgrepo-com.png" alt="Search Icon">
+            </button>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">Home</a>
+            <a href="list.html">Daftar Resep</a>
+            <a href="about.html">About</a>
+        </nav>
+        
+        <div class="menu-icon" id="menu-icon">
+            <img src="https://img.icons8.com/ios-filled/50/000000/menu.png" alt="Menu Icon">
+        </div>
+    </header>
+    <div class="container">
+        <img src="style/images/logo.png" alt="Logo" class="logo-about">
+        <h1>Tentang Kami</h1>
+        <p>Kami Adalah S A P A (Selvia, Anggi, Prima, Ahmad).Kami adalah tim yang berdedikasi untuk memperkenalkan keanekaragaman kuliner Nusantara melalui platform digital ini. Dengan semangat menjaga budaya dan tradisi, kami berusaha menghadirkan informasi yang akurat dan menarik bagi setiap pengunjung.</p>
+        <div class="buttons">
+            <a href="Team.html" class="btn">Our Team</a>
+            <a href="https://github.com/MiracleGlow/Kuliner-Nusantara.git" class="btn" target="_blank">GitHub Repository</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
