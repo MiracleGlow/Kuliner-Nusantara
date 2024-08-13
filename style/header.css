@@ -117,7 +117,7 @@ body {
 
     .search-container {
         margin: 8px 16px;
-        margin-left: 0;
+        margin-left: 4px;
         max-width: 100%;
     }
 }
