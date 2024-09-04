@@ -24,6 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 { name: "Soto Banjar", link: "sotobanjar.html" },
                 { name: "Dawet", link: "dawet.html" },
                 { name: "Wedang Ronde", link: "wedangronde.html" },
+                { name: "Nasi Goreng", link: "nasigoreng.html" },
+                { name: "Sate Madura", link: "satemadura.html" },
             ];
 
             const filteredItems = items.filter(item => item.name.toLowerCase().includes(query));
