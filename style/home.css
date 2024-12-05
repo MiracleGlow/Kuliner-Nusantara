@@ -109,7 +109,7 @@ nav {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5); /* Overlay untuk meningkatkan keterbacaan teks */
+    background: rgba(0, 0, 0, 0.4); /* Overlay untuk meningkatkan keterbacaan teks */
 }
 
 .hero-section h1 {
