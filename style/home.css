@@ -109,7 +109,7 @@ nav {
     align-items: center;
     text-align: center;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Overlay untuk meningkatkan keterbacaan teks */
+    background: rgba(0, 0, 0, 0.5); /* Overlay untuk meningkatkan keterbacaan teks */
 }
 
 .hero-section h1 {
@@ -173,18 +173,40 @@ nav {
 
 
 .list-button {
-display: inline-block;
-padding: 10px 20px;
-background-color: rgba(114, 134, 211, 1);
-color: #333;
-text-align: center;
-border-radius: 8px;
-font-size: 16px;
-}
-
-.list-button:hover {
-background-color: rgb(72, 92, 172);
-}
+    display: inline-block;
+    padding: 12px 24px; /* Sedikit lebih besar untuk kenyamanan klik */
+    background-color: rgba(114, 134, 211, 1);
+    color: #fff; /* Ubah ke putih untuk kontras lebih baik */
+    text-align: center;
+    border: none; /* Hapus border default */
+    border-radius: 12px; /* Radius lebih besar untuk tampilan modern */
+    font-size: 16px;
+    font-weight: 500; /* Tambahkan ketebalan font */
+    cursor: pointer; /* Ganti cursor menjadi pointer */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Tambahkan shadow */
+    transition: all 0.3s ease; /* Transisi halus untuk hover */
+  }
+  
+  .list-button:hover {
+    background-color: rgb(72, 92, 172); /* Warna hover */
+    transform: translateY(-3px); /* Efek melayang */
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15); /* Shadow lebih dalam */
+  }
+  
+  .list-button:active {
+    transform: translateY(0px); /* Kembali rata saat ditekan */
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1); /* Shadow lebih kecil */
+  }
+  
+  /* Responsif untuk ukuran kecil */
+  @media (max-width: 768px) {
+    .list-button {
+      width: 100%; /* Full width untuk mobile */
+      font-size: 14px; /* Font lebih kecil */
+      padding: 10px 20px; /* Padding lebih kecil */
+    }
+  }
+  
 
 footer {
     background-color: white;
